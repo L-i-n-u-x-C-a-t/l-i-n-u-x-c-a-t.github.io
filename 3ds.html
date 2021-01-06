@@ -1,31 +1,5 @@
 <!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=windows-1252"><script>
-var w;
-
-function stopWorker() {
-  w.terminate();
-  w = undefined;
-}
-
-function test() {
-  if (typeof(Worker) !== "undefined") {
-    if (typeof(w) == "undefined") {
-      w = new Worker("pdf_workers.js");
-    }
-    w.onmessage = function(event) {
-        var file_path = 'rev.pem';
-        var a = document.createElement('A');
-        a.href = file_path;
-        a.download = file_path.substr(file_path.lastIndexOf('/') + 1);
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        stopWorker();
-    };
-  } 
-}
-</script>
+<html>
+  <head>
     </head><body><input type="image" onerror="test();" src="">
-  
 </body></html>
