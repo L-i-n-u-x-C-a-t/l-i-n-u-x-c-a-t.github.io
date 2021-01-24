@@ -38,6 +38,16 @@ img {
     border-radius: 20px;
 }
 
+.titlebar {
+    background-color: #17177a;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 10px;
+    border: 5px solid #2b2b8f;
+    height: fit-content;
+    margin-bottom: 5%;
+    text-align: center;
+}
 
 /* LINK STUFF*/
 
